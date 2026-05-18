@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台灣宮廟文創周邊商品合作案例調查報告（2020–2026）</title>
+<style>
+  :root {
+    --red: #C0392B;
+    --gold: #B8860B;
+    --gold-light: #F5D77A;
+    --dark: #1a1a1a;
+    --gray: #555;
+    --bg: #FDF8F0;
+    --card-bg: #FFFFFF;
+    --border: #E8D9B5;
+    --tag-bg: #FEF3CD;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Noto Serif TC", "Georgia", "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.75;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #7B1C1C 0%, #C0392B 50%, #922B21 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: "❖";
+    position: absolute;
+    font-size: 300px;
+    opacity: 0.04;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-shadow: 1px 2px 8px rgba(0,0,0,0.4);
+    margin-bottom: 12px;
+  }
+  header .subtitle {
+    font-size: 1.05rem;
+    opacity: 0.88;
+    letter-spacing: 0.05em;
+  }
+  header .meta {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-style: italic;
+  }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: var(--gold);
+    font-size: 1.3rem;
+    letter-spacing: 1rem;
+  }
+
+  /* Summary Bar */
+  .summary-bar {
+    background: var(--dark);
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 28px 40px;
+    flex-wrap: wrap;
+  }
+  .summary-bar .stat { text-align: center; }
+  .summary-bar .num {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .summary-bar .label {
+    font-size: 0.82rem;
+    opacity: 0.7;
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Main Layout */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 30px 80px;
+  }
+
+  /* Section Title */
+  .section-title {
+    font-size: 1.4rem;
+    color: var(--red);
+    border-left: 5px solid var(--red);
+    padding-left: 16px;
+    margin: 50px 0 30px;
+    letter-spacing: 0.06em;
+  }
+
+  /* Case Card */
+  .case-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(to right, #fdf3e3, #fffdf9);
+  }
+  .case-number {
+    background: var(--red);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 80px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -1px;
+  }
+  .card-title-block {
+    padding: 20px 24px;
+    flex: 1;
+  }
+  .card-title-block h2 {
+    font-size: 1.3rem;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+  .card-title-block .temple-meta {
+    font-size: 0.88rem;
+    color: var(--gray);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  .card-title-block .temple-meta span {
+    background: var(--tag-bg);
+    border: 1px solid var(--gold-light);
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 0.82rem;
+    color: #6B4C00;
+  }
+  .card-year {
+    background: var(--gold);
+    color: white;
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 0 0 0 8px;
+    align-self: flex-start;
+    margin-top: 16px;
+    margin-right: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Card Body */
+  .card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .card-body.full-width { grid-template-columns: 1fr; }
+
+  .card-section {
+    padding: 24px 28px;
+    border-right: 1px solid var(--border);
+  }
+  .card-section:last-child { border-right: none; }
+  .card-section h3 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--red);
+    margin-bottom: 12px;
+    border-bottom: 1px solid #f0e0c0;
+    padding-bottom: 8px;
+  }
+  .card-section p, .card-section li {
+    font-size: 0.92rem;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+  .card-section ul { padding-left: 18px; }
+  .card-section ul li { margin-bottom: 4px; }
+
+  /* Products Grid */
+  .product-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .product-tag {
+    background: #f8f0ff;
+    border: 1px solid #d4b8ee;
+    color: #5a2d82;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 0.82rem;
+  }
+  .product-tag.red {
+    background: #fff0f0;
+    border-color: #f5b8b8;
+    color: #8B0000;
+  }
+  .product-tag.green {
+    background: #f0fff4;
+    border-color: #9ee8b8;
+    color: #1a5c3a;
+  }
+
+  /* Image Row */
+  .image-row {
+    display: flex;
+    gap: 12px;
+    padding: 20px 28px;
+    background: #fafafa;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .image-row img {
+    height: 160px;
+    width: auto;
+    max-width: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+  .image-row img:hover { transform: scale(1.03); }
+  .image-caption {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 4px;
+    text-align: center;
+  }
+  .img-wrap { display: flex; flex-direction: column; }
+
+  /* Sources */
+  .sources-block {
+    padding: 16px 28px;
+    background: #f9f6ef;
+    border-top: 1px solid var(--border);
+  }
+  .sources-block h3 {
+    font-size: 0.8rem;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .sources-block a {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--red);
+    text-decoration: none;
+    margin-right: 14px;
+    margin-bottom: 4px;
+    border-bottom: 1px dashed var(--red);
+    opacity: 0.85;
+  }
+  .sources-block a:hover { opacity: 1; }
+
+  /* Insight Box */
+  .insight-box {
+    background: linear-gradient(135deg, #1a1a1a, #2c1810);
+    color: #F5D77A;
+    border-radius: 10px;
+    padding: 36px 40px;
+    margin: 60px 0 20px;
+  }
+  .insight-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    letter-spacing: 0.08em;
+    color: white;
+    border-bottom: 1px solid #444;
+    padding-bottom: 12px;
+  }
+  .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .insight-item h3 {
+    font-size: 0.88rem;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+    letter-spacing: 0.06em;
+  }
+  .insight-item p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #ccc;
+  }
+
+  /* Footer */
+  footer {
+    background: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.82rem;
+  }
+  footer span { color: var(--gold-light); }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    header h1 { font-size: 1.5rem; }
+    .card-body { grid-template-columns: 1fr; }
+    .card-section { border-right: none; border-bottom: 1px solid var(--border); }
+    .insight-grid { grid-template-columns: 1fr; }
+    .summary-bar { gap: 30px; }
+    .image-row img { height: 120px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>台灣宮廟文創周邊商品合作案例調查報告</h1>
+  <div class="subtitle">2020–2026 年間｜設計師 × 行銷公司 × 宮廟聯名與文創企劃</div>
+  <div class="meta">資料截止：2026 年 5 月｜調查對象：具公開企劃資料、設計公司合作、媒體討論度之案例</div>
+</header>
+
+<!-- Summary Bar -->
+<div class="summary-bar">
+  <div class="stat"><span class="num">10</span><span class="label">案例</span></div>
+  <div class="stat"><span class="num">9</span><span class="label">宮廟（組織）</span></div>
+  <div class="stat"><span class="num">15+</span><span class="label">設計公司 / 品牌</span></div>
+  <div class="stat"><span class="num">55+</span><span class="label">個別產品品項</span></div>
+  <div class="stat"><span class="num">6</span><span class="label">調查年份跨度</span></div>
+</div>
+
+<main>
+
+  <div class="divider">❖ ❖ ❖</div>
+
+  <!-- 案例 1 -->
+  <h2 class="section-title">案例 01｜大甲鎮瀾宮 × Too Cheap Art「與神同行嬰幼兒禮盒」</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">01</div>
+      <div class="card-title-block">
+        <h2>「與神同行」嬰幼兒禮盒 × 限量藝術雕像</h2>
+        <div class="temple-meta">
+          <span>台中市大甲區</span>
+          <span>主祀：媽祖</span>
+          <span>合作：Too Cheap Art × 玖零零原型工作室</span>
+        </div>
+      </div>
+      <div class="card-year">2021</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag red">嬰兒搖鈴（哪吒風火輪）</span>
+          <span class="product-tag red">安撫巾（媽祖披肩）</span>
+          <span class="product-tag red">固齒器（關公青龍偃月刀）</span>
+          <span class="product-tag red">矽膠圍兜（財神斗笠）</span>
+          <span class="product-tag red">爬行帽（虎爺）</span>
+          <span class="product-tag">限量媽祖藝術雕像（泥塑）</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>將媽祖、關公、哪吒、財神、虎爺五位神明的法器與坐騎，轉化為嬰兒用品造型，兼具台灣民俗意象與現代親子需求。禮盒商品於 2021 年 3 月 31 日送至大甲鎮瀾宮進行過爐加持儀式，強化神聖正當性。</p>
+        <p>限量藝術雕像則以媽祖頭像融合維梅爾名畫《戴珍珠耳環的少女》，走「神明文化挪用當代藝術」路線。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>設計公司 / 設計師</h3>
+        <p><strong>Too Cheap Art（腦室設計）</strong>：台灣創意設計品牌，擅長將民俗符號轉化為當代商品設計，有獨立電商平台 toocheapart.com。</p>
+        <p><strong>玖零零原型工作室（設計師許山姆）</strong>：負責限量泥塑雕像的造型設計與量產原型製作。</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與討論</h3>
+        <p><strong>上市時間：</strong>2021 年 4 月 29 日開放線上預購，5 月初出貨。</p>
+        <p><strong>討論亮點：</strong>ETtoday、聯合新聞網、uDesign 有設計均有報導；YouTube 開箱介紹引發廣泛分享；FB 廟方粉絲頁貼文過爐儀式照大量轉發。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://cdn2.ettoday.net/images/5596/d5596906.jpg" alt="與神同行嬰幼兒禮盒主圖" onerror="this.style.display='none'">
+        <div class="image-caption">禮盒全套產品展示</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://cdn2.ettoday.net/images/5596/d5596905.jpg" alt="禮盒內容物" onerror="this.style.display='none'">
+        <div class="image-caption">安撫巾、虎爺帽等內容物特寫</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://cdn2.ettoday.net/images/5596/d5596907.jpg" alt="與神同行品牌形象圖" onerror="this.style.display='none'">
+        <div class="image-caption">Too Cheap Art 品牌形象圖</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://www.ettoday.net/news/20210429/1971057.htm" target="_blank">ETtoday 消費新聞</a>
+      <a href="https://udn.com/news/story/7270/5703135" target="_blank">聯合新聞網</a>
+      <a href="https://shop.toocheapart.com/products/dajiamazu-along-with-god-baby-gift-box" target="_blank">Too Cheap Art 商品頁</a>
+      <a href="https://www.youtube.com/watch?v=2fR1e8GsYk0" target="_blank">YouTube 介紹影片</a>
+    </div>
+  </div>
+
+  <!-- 案例 2 -->
+  <h2 class="section-title">案例 02｜大甲鎮瀾宮 × BONNY&READ「開運聯名飾品系列」</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">02</div>
+      <div class="card-title-block">
+        <h2>開運飾品系列（多期合作）</h2>
+        <div class="temple-meta">
+          <span>台中市大甲區</span>
+          <span>主祀：媽祖</span>
+          <span>合作：BONNY&amp;READ 飾品品牌</span>
+        </div>
+      </div>
+      <div class="card-year">2022–2023</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag red">天然晶石手鍊</span>
+          <span class="product-tag red">尾戒（鎖骨鍊）</span>
+          <span class="product-tag red">皮革鑰匙圈</span>
+          <span class="product-tag">「我要賺大錢」款</span>
+          <span class="product-tag">「小人退散」款</span>
+          <span class="product-tag">「好人緣」款</span>
+          <span class="product-tag green">7-ELEVEN 集點限定款</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>台灣首個與大甲鎮瀾宮官方授權的流行飾品品牌。以當代穿搭語言設計開運飾品，天然晶石搭配廟方授權符印元素，每件成品均送至廟內過爐加持。</p>
+        <p>依不同運勢需求（財運、桃花、職場）設計主題系列，分多波次上市；後與 7-ELEVEN 合作特別活動款，擴大觸及大眾。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>設計公司 / 品牌</h3>
+        <p><strong>BONNY&amp;READ</strong>：台灣自有飾品設計品牌，以年輕女性族群為主要客群，擁有線上電商平台。此合作為其知名度最高的廟宇聯名案，也是大甲鎮瀾宮最早開展的流行飾品合作之一。</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與討論</h3>
+        <p><strong>上市時間：</strong>2022 年 12 月（第三波）；2023 年農曆新年系列。</p>
+        <p><strong>討論亮點：</strong>PopDaily、FunDesign、自由電子報 iStyle 均有介紹；7-ELEVEN 通路合作後觸及更廣泛消費者；廟方 FB 粉絲頁協助宣傳，轉發量高。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://static.popdaily.com.tw/wp-content/uploads/2022/12/yldta46zb7k0c8oc0w8wwggwrndv9c-1000x500.jpg" alt="財運高漲手鍊" onerror="this.style.display='none'">
+        <div class="image-caption">財運高漲天然晶石手鍊</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://static.popdaily.com.tw/wp-content/uploads/2022/12/49uexxn3v0844goow00o0s4srndv9e-1000x500.jpg" alt="無限鈔能力戒指" onerror="this.style.display='none'">
+        <div class="image-caption">無限鈔能力尾戒</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://static.popdaily.com.tw/wp-content/uploads/2022/12/ejcu815dkcg0ccw4w88k88w4crndv9g-1000x500.jpg" alt="財運普拉斯手鍊" onerror="this.style.display='none'">
+        <div class="image-caption">財運普拉斯手鍊</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://static.popdaily.com.tw/wp-content/uploads/2022/12/5hk5a4b59jswcskk8wwc40korndvar-1000x500.jpg" alt="招財貓擴香禮盒" onerror="this.style.display='none'">
+        <div class="image-caption">招財貓擴香禮盒</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://www.popdaily.com.tw/press/1360377" target="_blank">PopDaily</a>
+      <a href="https://www.fundesign.tv/bonnyread/" target="_blank">FunDesign 瘋設計</a>
+      <a href="https://istyle.ltn.com.tw/article/29126" target="_blank">自由電子報 iStyle</a>
+      <a href="https://www.bonnyread.com.tw/categories/dajia-matsu" target="_blank">BONNY&amp;READ 商品頁</a>
+    </div>
+  </div>
+
+  <!-- 案例 3 -->
+  <h2 class="section-title">案例 03｜霞海城隍廟 × Re-lab「你的在線月老」</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">03</div>
+      <div class="card-title-block">
+        <h2>資訊設計 × Chatbot × 設計結緣品</h2>
+        <div class="temple-meta">
+          <span>台北市大同區（迪化街）</span>
+          <span>主祀：城隍爺、月老</span>
+          <span>合作：Re-lab × 島民集合 Hello Islander</span>
+        </div>
+      </div>
+      <div class="card-year">2020–2022</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag">月老參拜流程資訊設計海報</span>
+          <span class="product-tag green">Facebook Chatbot 線上求籤</span>
+          <span class="product-tag red">月老祝福設計畫報</span>
+          <span class="product-tag red">紅線明信片組合</span>
+          <span class="product-tag red">限量御守 × 紙膠帶</span>
+          <span class="product-tag red">「甜作之盒」供品組</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>Re-lab 最初以廟門口的流程圖做內部設計訓練，後獲廟方認可展開正式合作，完成資訊設計海報；後續再開發線上月老 Chatbot，使用者可在手機端完成求籤體驗。</p>
+        <p>島民集合（Hello Islander）承接廟方授權，開發可購買的設計結緣品——每份商品蓋有廟方印章，強調「真實加持」，定位在設計感伴手禮市場。此模式在台灣廟宇文創中屬複合型最高度的案例。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>設計公司</h3>
+        <p><strong>Re-lab</strong>：台灣知名資訊設計顧問公司，以《READr》資料新聞與視覺化著稱，擅長將複雜資訊轉為易讀圖表，霞海城隍廟合作是其廟宇類代表作。</p>
+        <p><strong>島民集合 Hello Islander</strong>：結合台灣在地文化的電商團隊，專售設計感文創商品。</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與討論</h3>
+        <p><strong>合作時間：</strong>海報約 2019–2020；Chatbot 2020–2021；商品持續販售中。</p>
+        <p><strong>討論亮點：</strong>500輯（聯合報系）深度專訪廟方第六代傳人；天下雜誌〈百年廟怎麼翻紅〉專題大篇幅介紹此合作模式，引發多家媒體跟進報導。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/28/1/11394153.jpg" alt="Re-lab 月老參拜流程資訊圖" onerror="this.style.display='none'">
+        <div class="image-caption">Re-lab 設計的月老參拜流程資訊圖</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/28/1/11394140.png" alt="你的在線月老 Chatbot 介面" onerror="this.style.display='none'">
+        <div class="image-caption">「你的在線月老」求籤 Chatbot 介面</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/28/1/11394173.jpg" alt="霞海城隍廟海報發放現場" onerror="this.style.display='none'">
+        <div class="image-caption">廟前免費贈海報活動現場</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://helloislander.cc/wp-content/uploads/2021/06/%E5%85%A7%E6%96%8701-1300x974.png" alt="島民集合限量御守" onerror="this.style.display='none'">
+        <div class="image-caption">島民集合限量御守產品圖</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://500times.udn.com/wtimes/story/120842/5211511" target="_blank">500輯深度報導</a>
+      <a href="https://www.cw.com.tw/article/5126408" target="_blank">天下雜誌</a>
+      <a href="https://helloislander.cc/" target="_blank">島民集合商品頁</a>
+      <a href="https://godoflove.cc/xiahai/start/" target="_blank">在線月老 Chatbot</a>
+    </div>
+  </div>
+
+  <!-- 案例 4 -->
+  <h2 class="section-title">案例 04｜蘆洲五福宮「蓋廟特急」嘖嘖群眾募資系列</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">04</div>
+      <div class="card-title-block">
+        <h2>土地公王重建募資 × 文創商品回饋系列（三期）</h2>
+        <div class="temple-meta">
+          <span>新北市蘆洲區</span>
+          <span>主祀：五路財神土地公王、虎爺</span>
+          <span>設計：蓋廟特急信眾團隊（聖筊審定）</span>
+        </div>
+      </div>
+      <div class="card-year">2020–2023</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag red">虎爺鑽香箱小神龕</span>
+          <span class="product-tag red">對旺虎爺杯緣子公仔（2 款）</span>
+          <span class="product-tag">好野蓋廟紀念酒杯</span>
+          <span class="product-tag">四季膠帶（4 款）</span>
+          <span class="product-tag green">招財虎蠟燭 × 毛巾 × 碗公</span>
+          <span class="product-tag">平安符發財金組合</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p><strong>台灣首次以群眾募資重建宮廟的計畫。</strong>第一期（2020）重建神龕，第二期（2022）擴建，第三期（2023）完工。每一期均推出設計商品作為贊助回饋。</p>
+        <p>獨特之處：所有商品設計（包含顏色的細節選擇）均須經土地公聖筊確認後才公開，形成「神明審定」的行銷亮點，引發大量社群討論與媒體報導。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>設計方式</h3>
+        <p>由信眾社群自發組成蓋廟特急設計團隊，非委外設計公司。設計流程高度透明，定期在 IG / FB 公開設計稿，並直播或記錄聖筊確認過程，形成極具網路傳播力的「參與感」敘事。</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與討論</h3>
+        <p><strong>嘖嘖三期募資總成果：</strong>第一期 2020/11、第二期 2022/05、第三期 2023（神龕系列）。PTT Folklore 板第一期公告帖引發熱烈討論；ETtoday 房產雲也有報導。</p>
+        <p>IG @earthgodexpress 追蹤人數持續成長，為台灣廟宇文創社群帳號中互動率最高的案例之一。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://img.ltn.com.tw/Upload/business/page/800/2023/03/28/3960826_1.jpg" alt="蓋廟特急虎爺商品" onerror="this.parentElement.innerHTML='<div style=\'padding:20px;color:#888;font-size:0.85rem;border:1px dashed #ccc;border-radius:6px;text-align:center;width:200px;\'>圖片需登入嘖嘖平台或 IG 查看<br><a href=\'https://www.instagram.com/earthgodexpress/\' target=\'_blank\' style=\'color:#C0392B;\'>→ IG @earthgodexpress</a></div>'">
+        <div class="image-caption">蓋廟特急系列商品</div>
+      </div>
+      <div class="img-wrap" style="display:flex;flex-direction:column;justify-content:center;">
+        <div style="padding:16px 20px;color:#555;font-size:0.85rem;border:1px dashed #ccc;border-radius:6px;text-align:center;width:220px;line-height:1.6;">
+          嘖嘖平台圖片需登入存取<br>
+          <a href="https://www.zeczec.com/projects/earthgodexpress" target="_blank" style="color:#C0392B;font-size:0.82rem;">→ 嘖嘖第一期募資頁</a><br>
+          <a href="https://www.instagram.com/earthgodexpress/" target="_blank" style="color:#C0392B;font-size:0.82rem;">→ IG @earthgodexpress</a>
+        </div>
+        <div class="image-caption">更多商品圖請見官方連結</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://www.zeczec.com/projects/earthgodexpress" target="_blank">嘖嘖募資頁（第一期）</a>
+      <a href="https://www.zeczec.com/projects/tudigong3" target="_blank">嘖嘖募資頁（第三期）</a>
+      <a href="https://house.ettoday.net/news/2485167" target="_blank">ETtoday 房產雲報導</a>
+      <a href="https://www.ptt.cc/bbs/Folklore/M.1606729589.A.8ED.html" target="_blank">PTT Folklore 板</a>
+      <a href="https://www.instagram.com/earthgodexpress/" target="_blank">IG @earthgodexpress</a>
+    </div>
+  </div>
+
+  <!-- 案例 5 -->
+  <h2 class="section-title">案例 05｜「設計師的仙界傳說」× flyingV《眾神曆》</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">05</div>
+      <div class="card-title-block">
+        <h2>《2024 龍年眾神曆》神明圖鑑日曆</h2>
+        <div class="temple-meta">
+          <span>非特定廟宇（跨宗教 200 神明）</span>
+          <span>道教 × 漢傳佛教 × 民間信仰</span>
+          <span>設計：OHMYGOD 設計師仙界傳說（Misc + Wen）</span>
+        </div>
+      </div>
+      <div class="card-year">2023–2025</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag red">神明圖鑑日曆（全銀墨滿版印刷）</span>
+          <span class="product-tag">150 位神明知識 × 生日 × 法器圖解</span>
+          <span class="product-tag green">2024 龍年版（flyingV）</span>
+          <span class="product-tag green">2026 馬年版（flyingV 再次集資）</span>
+        </div>
+        <p style="margin-top:12px; font-size:0.88rem;">尺寸 24×16.5 cm；雙層印刷：先滿版銀墨，鏤空部分套黑墨，台灣日曆市場罕見工法。</p>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>由 Podcast「設計師的仙界傳說（OHMYGOD）」跨界推出實體商品，將節目內容（每集介紹一位神明的故事、圖像學與民俗意義）濃縮為設計感日曆。</p>
+        <p>定位為「最美神明圖鑑」，兼具宗教知識、設計收藏兩種價值，目標受眾從台灣青年設計師族群擴展至廟宇信眾。</p>
+        <p><strong>募資成果：</strong>2023 年 10 月上線，首日破 400 人贊助，最終籌得超過新台幣 1,800 萬元；2025 年推出 2026 馬年版再度突破千萬。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>設計師</h3>
+        <p><strong>Misc（視覺設計）× Wen（文案企劃）</strong>：兩位設計師共同主持 OHMYGOD Podcast，擁有超過十萬訂閱聽眾，此日曆為內容轉商品的代表性成功案例。IG @ohmygoddd.tw</p>
+      </div>
+      <div class="card-section">
+        <h3>媒體討論</h3>
+        <p>500輯、La Vie、威傳媒等設計媒體深度報導；IG 開箱文在設計師社群廣泛流傳；為台灣近年「廟宇文化商品化」討論中被引用最頻繁的案例之一。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://fv-ugc.imgix.net/projects/34394/article/65284f3031911.jpg" alt="眾神曆整體樣貌" onerror="this.style.display='none'">
+        <div class="image-caption">《2024 龍年眾神曆》整體展示</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://fv-ugc.imgix.net/projects/34394/article/652861cb6d0dc.jpg" alt="眾神曆內頁節氣版面" onerror="this.style.display='none'">
+        <div class="image-caption">內頁節氣與神明資訊版面</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://fv-ugc.imgix.net/projects/34394/article/652861d68fc39.jpg" alt="眾神曆設計細節" onerror="this.style.display='none'">
+        <div class="image-caption">雙層印刷工法細節特寫</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://fv-ugc.imgix.net/projects/34394/article/6529656312d70.jpg" alt="眾神曆神明插圖" onerror="this.style.display='none'">
+        <div class="image-caption">神明插圖版面展示</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://www.flyingv.cc/projects/34394" target="_blank">flyingV 募資頁（2024 版）</a>
+      <a href="https://www.flyingv.cc/projects/36799" target="_blank">flyingV 募資頁（2026 版）</a>
+      <a href="https://500times.udn.com/wtimes/story/120842/7643844" target="_blank">500輯報導</a>
+      <a href="https://www.wowlavie.com/article/ae2301155" target="_blank">La Vie</a>
+      <a href="https://www.instagram.com/ohmygoddd.tw/" target="_blank">IG @ohmygoddd.tw</a>
+    </div>
+  </div>
+
+  <!-- 案例 6 -->
+  <h2 class="section-title">案例 06｜新竹都城隍廟 × 茶湯會「Black Project 玩黑計畫」</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">06</div>
+      <div class="card-title-block">
+        <h2>鬼月全黑系列飲品 × 城隍爺聯名茄芷袋</h2>
+        <div class="temple-meta">
+          <span>新竹市北區</span>
+          <span>主祀：城隍爺</span>
+          <span>合作：茶湯會 TP-TEA 品牌行銷企劃</span>
+        </div>
+      </div>
+      <div class="card-year">2024</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag red">耀黑芝麻凍豆漿（飲品）</span>
+          <span class="product-tag red">耀黑檸檬朵朵（飲品）</span>
+          <span class="product-tag red">耀黑系列雞蛋糕</span>
+          <span class="product-tag">城隍爺插畫聯名杯身</span>
+          <span class="product-tag green">「嘿嘿！來杯袋」尼龍茄芷袋（228 元）</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>茶湯會 19 週年選定鬼月檔期，與新竹都城隍廟跨界合作。以城隍爺「陰間執法者、善惡審判者」的形象，設計全黑色系飲品（竹炭粉）、黑色茄芷袋及限定杯身。</p>
+        <p>黑色茄芷袋是台灣農市文化符號，加上城隍廟的地方民俗意象，形成「地方廟宇 × 都會飲品品牌」的高反差聯名，在社群引發大量討論。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>行銷企劃</h3>
+        <p><strong>茶湯會 TP-TEA 行銷部</strong>主導規劃，以週年慶與鬼月雙重節點強化話題性；廟方提供神明授權與神聖加持背書，品牌提供通路（全台 300 多間門市）、流行設計與行銷資源。此案示範了「連鎖飲料品牌 × 地方宮廟」的可複製模式。</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與討論</h3>
+        <p><strong>上市：</strong>2024 年 7 月 15 日（飲品）、8 月 1 日（茄芷袋）。</p>
+        <p>ETtoday、聯合新聞網、愛料理生活誌均有報導；IG、FB 開箱貼文廣傳；茄芷袋迅速售罄，引發二手市場炒作。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://cdn2.ettoday.net/images/7743/d7743490.jpg" alt="茶湯會城隍廟聯名飲品主圖" onerror="this.style.display='none'">
+        <div class="image-caption">耀黑系列飲品產品主圖</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://cdn2.ettoday.net/images/7743/d7743489.jpg" alt="城隍爺杯身設計特寫" onerror="this.style.display='none'">
+        <div class="image-caption">城隍爺插畫杯身設計特寫</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://cdn2.ettoday.net/images/7743/d7743487.jpg" alt="聯名周邊商品展示" onerror="this.style.display='none'">
+        <div class="image-caption">聯名周邊商品（含茄芷袋）展示</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://cdn2.ettoday.net/images/7743/d7743488.jpg" alt="門市聯名活動現場" onerror="this.style.display='none'">
+        <div class="image-caption">門市聯名活動現場</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://travel.ettoday.net/article/2776099.htm" target="_blank">ETtoday 旅遊雲</a>
+      <a href="https://travel.udn.com/travel/story/7193/8092808" target="_blank">聯合新聞網旅遊</a>
+      <a href="https://blog.icook.tw/posts/225509" target="_blank">愛料理生活誌</a>
+    </div>
+  </div>
+
+  <!-- 案例 7 -->
+  <h2 class="section-title">案例 07｜北港朝天宮 × 甘樂文創「爆平安」炮屑紙文創</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">07</div>
+      <div class="card-title-block">
+        <h2>犁炮炮屑紙 × 手工造紙工藝文創商品</h2>
+        <div class="temple-meta">
+          <span>雲林縣北港鎮</span>
+          <span>主祀：天上聖母（媽祖）</span>
+          <span>合作：甘樂文創 × 埔里廣興紙寮</span>
+        </div>
+      </div>
+      <div class="card-year">2018–持續</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag red">爆平安炮屑手工紙（保留煙硝味）</span>
+          <span class="product-tag red">炮紙版畫紅包袋（平安字樣）</span>
+          <span class="product-tag">犁炮紙衍生文創商品</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>甘樂文創創辦人林峻丞跟隨北港媽祖遶境至三峽後，回收犁炮施放後的炮屑，委託埔里廣興紙寮以傳統手工抄紙工法製成「犁炮紙」。</p>
+        <p>台灣民俗中炮屑帶有神明加持的平安力量，甘樂將此一信仰意涵轉化為可購買的文創商品，結合環保（廢料再利用）與地方信仰，成為 Pinkoi 平台上流傳最廣的宮廟文創之一。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>設計公司</h3>
+        <p><strong>甘樂文創</strong>（新北市三峽）：林峻丞創辦，以三峽在地文化為核心，推動社區設計與文創商品開發，曾獲多項台灣社會企業獎項，為台灣廟宇文創早期代表性組織。</p>
+        <p><strong>廣興紙寮</strong>（南投縣埔里鎮）：台灣少數仍以傳統手工造紙生產的工坊，提供紙藝技術支援。</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與討論</h3>
+        <p>Pinkoi 平台上架，跨越 2020 年前後持續販售；甘樂官網有完整企劃說明；列為台灣宮廟文創學術研究引用案例；北港在地媒體亦有介紹。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://www.thecan.com.tw/cdn/upload/image/20201201/a8bbb403-04d4-4eb8-b08e-d28776a5ac60.jpg" alt="爆平安炮屑紙系列主視覺" onerror="this.style.display='none'">
+        <div class="image-caption">爆平安炮屑紙系列主視覺（甘樂文創官網）</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://www.thecan.com.tw/cdn/upload/image/20181127/1540037717910.jpeg" alt="炮屑平安禮盒展示" onerror="this.style.display='none'">
+        <div class="image-caption">炮屑平安禮盒完整展示</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://cdn01.pinkoi.com/product/1wTiJVqh/0/800x0.jpg" alt="炮屑手工紙 Pinkoi" onerror="this.style.display='none'">
+        <div class="image-caption">炮屑手工紙商品圖（Pinkoi）</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://www.thecan.com.tw/tw/creative/detail/74" target="_blank">甘樂文創官網</a>
+      <a href="https://www.pinkoi.com/product/1wTiJVqh" target="_blank">Pinkoi 商品頁（手工紙）</a>
+      <a href="https://www.pinkoi.com/product/kFnF6cua" target="_blank">Pinkoi 商品頁（紅包袋）</a>
+    </div>
+  </div>
+
+  <!-- 案例 8 -->
+  <h2 class="section-title">案例 08｜嘉義市政府 × 八間廟宇「福抱嘉義，來嘉廟妙妙」</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">08</div>
+      <div class="card-title-block">
+        <h2>跨廟聯合文創設計計畫（2021 台灣設計展）</h2>
+        <div class="temple-meta">
+          <span>嘉義市（8 間廟宇聯合）</span>
+          <span>主祀：城隍、地藏王、財神、文昌帝君等</span>
+          <span>合作：嘉義市政府委託設計團隊</span>
+        </div>
+      </div>
+      <div class="card-year">2021</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>參與廟宇</h3>
+        <ul>
+          <li>嘉義市城隍廟</li>
+          <li>九華山地藏庵</li>
+          <li>文財殿</li>
+          <li>大天宮</li>
+          <li>朝天宮</li>
+          <li>天后宮</li>
+          <li>慈濟宮</li>
+          <li>慈龍寺</li>
+        </ul>
+      </div>
+      <div class="card-section">
+        <h3>產品種類（部分列舉）</h3>
+        <div class="product-tags">
+          <span class="product-tag red">驅邪庇祐造型隨身碟（城隍廟）</span>
+          <span class="product-tag red">十八般武藝筆（城隍廟）</span>
+          <span class="product-tag red">大願隨行偶（九華山地藏庵）</span>
+          <span class="product-tag red">文財孔雀套筆（文財殿）</span>
+          <span class="product-tag red">金雞夜燈（大天宮）</span>
+          <span class="product-tag red">神農茶浴包（大天宮）</span>
+          <span class="product-tag green">廟宇散步地圖（中英日三語）</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>嘉義市政府主導，以城市美學介入地方廟宇，針對八間廟宇分別設計專屬文創商品，費時半年以上完成。成果展搭配 2021 台灣設計展（台南主場 + 嘉義分場）展出，是政府推動廟宇文創的代表性政策案例。</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與展覽</h3>
+        <p><strong>成果展：</strong>2021 年 12 月 16 日開幕，展期至 2022 年 1 月 2 日。</p>
+        <p>嘉義市政府官網有完整新聞稿；中時即時新聞有報導；設計展相關節目介紹；為少數由地方政府統籌、具完整記錄的廟宇文創政策案例。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://images.chinatimes.com/newsphoto/2021-12-16/656/20211216004530.jpg" alt="嘉義廟宇文創商品發布現場" onerror="this.style.display='none'">
+        <div class="image-caption">八廟文創商品發布現場</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://images.chinatimes.com/newsphoto/2021-12-16/656/20211216004531.jpg" alt="文創商品展示桌" onerror="this.style.display='none'">
+        <div class="image-caption">各廟宇文創商品展示桌</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://images.chinatimes.com/newsphoto/2021-12-16/656/20211216004532.jpg" alt="商品細節特寫" onerror="this.style.display='none'">
+        <div class="image-caption">商品細節特寫</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://images.chinatimes.com/newsphoto/2021-12-16/656/20211216004534.jpg" alt="台灣設計展現場" onerror="this.style.display='none'">
+        <div class="image-caption">2021 台灣設計展展示現場</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://www.chiayi.gov.tw/News_Content.aspx?n=455&s=632089" target="_blank">嘉義市政府官方新聞稿</a>
+      <a href="https://www.chinatimes.com/realtimenews/20211216004529-260405" target="_blank">中時即時新聞</a>
+    </div>
+  </div>
+
+  <!-- 案例 9 -->
+  <h2 class="section-title">案例 09｜白沙屯拱天宮 × 路遙圓創「HelloTaiwan 神明公仔」</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">09</div>
+      <div class="card-title-block">
+        <h2>白沙屯媽祖設計師盲盒 × 遶境授權結緣品</h2>
+        <div class="temple-meta">
+          <span>苗栗縣通霄鎮</span>
+          <span>主祀：媽祖</span>
+          <span>合作：路遙圓創台灣設計師玩具品牌</span>
+        </div>
+      </div>
+      <div class="card-year">2024</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag red">HelloTaiwan 神明系列設計師盲盒（白沙屯媽祖款）</span>
+          <span class="product-tag">全系列 9 款神明（含隱藏款「電子花車」）</span>
+          <span class="product-tag green">遶境期間廟方免費發放授權公仔（8,000 盒）</span>
+        </div>
+        <p style="margin-top:12px; font-size:0.88rem;">每款零售價 120 元，遶境連 9 天免費提供，打破廟宇商品「只能賣、不免費」的慣例。</p>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>路遙圓創「HelloTaiwan 神明系列」是台灣第一款與多間廟宇取得官方授權的設計師盲盒，白沙屯媽祖為第五代第五款。廟方以 8,000 盒授權公仔取代傳統紙質結緣品，在遶境沿途免費發放，結合廟方信眾與設計師玩具（art toy）收藏族群兩個社群。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>設計公司</h3>
+        <p><strong>路遙圓創</strong>（台灣）：台灣本土設計師玩具品牌，專注台灣文化 IP 的公仔化，是近年「台灣神明設計師玩具」最具代表性的品牌，也是台灣少數能取得多廟宇授權的商業設計品牌。官網 luyaotoys.com</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與討論</h3>
+        <p><strong>時間：</strong>2024 年白沙屯媽祖遶境期間。</p>
+        <p>聯合新聞網旅遊有報導；遶境現場發放引發大量 IG、FB 打卡貼文；設計師玩具社群（盲盒收藏族群）廣泛討論隱藏款；為廟宇文創結合潮玩文化的代表案例。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/t3/2026/04/09/34838896.jpg&M=1&x=0&y=0&sw=0&sh=0&sl=W&fw=800" alt="白沙屯媽祖公仔外觀" onerror="this.style.display='none'">
+        <div class="image-caption">白沙屯媽祖公仔外觀展示</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/t3/2026/04/06/34830196.jpg&M=1&x=0&y=0&sw=0&sh=0&sl=W&fw=800" alt="HelloTaiwan 神明系列第五代" onerror="this.style.display='none'">
+        <div class="image-caption">HelloTaiwan 神明系列第五代聯名公仔</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/t3/2026/04/09/34838850.jpg&M=1&x=0&y=0&sw=0&sh=0&sl=W&fw=800" alt="公仔設計說明" onerror="this.style.display='none'">
+        <div class="image-caption">公仔設計細節說明</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/t3/2026/04/09/34838854.jpg&M=1&x=0&y=0&sw=0&sh=0&sl=W&fw=800" alt="全系列9款含隱藏款" onerror="this.style.display='none'">
+        <div class="image-caption">全系列 9 款＋隱藏款一覽</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://travel.udn.com/travel/story/7160/9430825" target="_blank">聯合新聞網旅遊報導</a>
+      <a href="https://luyaotoys.com/" target="_blank">路遙圓創官網</a>
+    </div>
+  </div>
+
+  <!-- 案例 10 -->
+  <h2 class="section-title">案例 10｜北港武德宮 × 買樂文創「黑虎將軍 IP 系列 × 企業多元聯名」</h2>
+  <div class="case-card">
+    <div class="card-header">
+      <div class="case-number">10</div>
+      <div class="card-title-block">
+        <h2>財神廟 IP 資本化：自建設計品牌 + 跨企業聯名授權</h2>
+        <div class="temple-meta">
+          <span>雲林縣北港鎮</span>
+          <span>主祀：武財神趙公明（五路財神）</span>
+          <span>合作：買樂文創（自有品牌）× 泰山・永豐金・PureBaby・Suntory 等</span>
+        </div>
+      </div>
+      <div class="card-year">2020–2026</div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>產品種類</h3>
+        <div class="product-tags">
+          <span class="product-tag red">黑虎將軍存錢筒系列（含 50% 天庫爐灰）</span>
+          <span class="product-tag red">黑虎大玩偶（120cm 手工絨毛，限量序號）</span>
+          <span class="product-tag red">黑虎大將軍虎牌（黑檀木，2024）</span>
+          <span class="product-tag">泰山純水「如虎添億」聯名包裝（2026）</span>
+          <span class="product-tag">永豐金證券「黑皮巴拉聚寶盆」禮盒（限量 16,000 份，2026）</span>
+          <span class="product-tag green">PureBaby「接財褲」聯名紙尿褲（2026）</span>
+          <span class="product-tag">HOYA TIGER NFT（2022，與奧丁丁合作）</span>
+          <span class="product-tag">財神趙公明 × 十年錢母 NFT（2022，限量 8,888 枚）</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <h3>企劃概念</h3>
+        <p>北港武德宮年參訪人次逾 800 萬，現任主委林安樂（台大經濟、政大金融背景）接任後系統性推動 IP 品牌化：設立自有文創品牌「買樂文創」，以武財神坐騎「黑虎將軍（虎爺）」為核心 IP，開發逾 30 款商品系列。</p>
+        <p>策略核心是<strong>「廟方主動建 IP，企業主動求合作」</strong>：將財神信仰的「神格授信」轉化為企業品牌的背書資產，跨越食品、金融、嬰兒用品、保健、香氛等品類。部分商品（如存錢筒）加入 50% 天庫爐灰，強化神聖物質錨定。</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-section">
+        <h3>設計公司 / 品牌</h3>
+        <p><strong>買樂文創</strong>（廟方自建品牌，雲林）：台灣少見由廟方直接運營的文創品牌，負責黑虎將軍系列設計與製造，不依賴外部設計公司，廟方同時扮演品牌主與設計發包方。</p>
+        <p><strong>奧丁丁集團 × 米珞安影業</strong>：負責 2022 年 NFT 企劃，由知名刺青師彫壬 Horiren 操刀視覺，融合台式美學與區塊鏈技術，在松山文創園區辦展。</p>
+        <p><strong>聯名企業</strong>：泰山（食品）、永豐金證券（金融）、Suntory（日系保健）、PureBaby（嬰兒用品）、Mixx（香氛）、AllInHome 窩在家（居家）。</p>
+      </div>
+      <div class="card-section">
+        <h3>發售與討論</h3>
+        <p><strong>廟方官網商城</strong>：wude.org.tw，設有完整文創商品列表，長期線上銷售。</p>
+        <p><strong>2022 NFT 展覽</strong>：松山文創園區藝異空間，4 月至 5 月，免費入場，媒體廣泛報導。</p>
+        <p><strong>討論亮點：</strong>遠見雜誌（AI 解籤詩報導）、TechNews（人流 AI 系統）、TNL 關鍵評論網（黑虎將軍文創深度報導）、工商時報（永豐金聯名新聞）；NFT 企劃獲區塊客、幣特財經等區塊鏈媒體報導。</p>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="img-wrap">
+        <img src="https://images.chinatimes.com/newsphoto/2021-11-23/656/20211123004584.jpg" alt="北港武德宮黑虎將軍文創系列" onerror="this.style.display='none'">
+        <div class="image-caption">黑虎將軍虎年文創商品系列（2021）</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://cdn2.ettoday.net/images/6173/d6173897.jpg" alt="黑虎 NFT 系列" onerror="this.style.display='none'">
+        <div class="image-caption">HOYA TIGER NFT 系列（2022）</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2026/01/14/2/34185755.jpg" alt="泰山純水如虎添億聯名" onerror="this.style.display='none'">
+        <div class="image-caption">泰山純水「如虎添億」聯名瓶（2026）</div>
+      </div>
+      <div class="img-wrap">
+        <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2026/01/18/realtime/34218186.jpg" alt="永豐金黑皮巴拉聚寶盆禮盒" onerror="this.style.display='none'">
+        <div class="image-caption">永豐金「黑皮巴拉聚寶盆」禮盒（2026）</div>
+      </div>
+    </div>
+    <div class="sources-block">
+      <h3>資料來源</h3>
+      <a href="https://www.wude.org.tw/?act=wenchuang&cmd=list" target="_blank">北港武德宮文創商品官網</a>
+      <a href="https://www.thenewslens.com/article/200176" target="_blank">TNL 關鍵評論網</a>
+      <a href="https://www.gvm.com.tw/article/109748" target="_blank">遠見雜誌</a>
+      <a href="https://www.ettoday.net/news/20220211/2187163.htm" target="_blank">ETtoday：HOYA TIGER NFT</a>
+      <a href="https://blockcast.it/2022/03/31/owlting-wudetemple-nft/" target="_blank">區塊客：NFT 企劃報導</a>
+      <a href="https://money.udn.com/money/story/7843/9265091" target="_blank">經濟日報：泰山聯名</a>
+      <a href="https://www.ctee.com.tw/news/20260115701257-430304" target="_blank">工商時報：永豐金聯名</a>
+    </div>
+  </div>
+
+  <!-- 洞察分析 -->
+  <div class="insight-box">
+    <h2>調查洞察與趨勢分析</h2>
+    <div class="insight-grid">
+      <div class="insight-item">
+        <h3>01｜大甲鎮瀾宮是聯名最主動的廟宇</h3>
+        <p>跨越飾品（BONNY&amp;READ）、嬰兒用品（Too Cheap Art）、陶器、養生食品等品類，且建立獨立電商平台「鎮瀾買足」，是目前台灣商業化程度最高的單一廟宇，已接近品牌化運營。</p>
+      </div>
+      <div class="insight-item">
+        <h3>02｜群眾募資是最高效的文創曝光管道</h3>
+        <p>嘖嘖（蘆洲五福宮蓋廟特急）與 flyingV（眾神曆）均創下千萬以上募資；台灣廟宇文創品牌若缺乏通路，群眾募資能同時解決資金、驗證市場、製造媒體話題三個問題。</p>
+      </div>
+      <div class="insight-item">
+        <h3>03｜「過爐加持」是強化商品正當性的核心機制</h3>
+        <p>幾乎所有案例（Too Cheap Art、BONNY&amp;READ、島民集合）都以「過爐加持」作為行銷訴求，將設計感商品轉化為「有神明背書的信仰物件」，模糊世俗商品與宗教結緣品的界線。</p>
+      </div>
+      <div class="insight-item">
+        <h3>04｜政府介入模式（嘉義）效益有限</h3>
+        <p>嘉義市政府計畫在展覽結束後後續資訊較少，與民間自發案例（蓋廟特急、眾神曆）的持續討論度形成對比。政府統籌型廟宇文創在持續運營與商業轉化上仍需突破。</p>
+      </div>
+      <div class="insight-item">
+        <h3>05｜台南三大廟為市場空缺</h3>
+        <p>祀典武廟、大天后宮、開基武廟目前無正式設計公司合作案，仍以廟方自製結緣品為主。以其知名度（特別是關公、媽祖形象在台灣的代表性），存在顯著的品牌合作空白。</p>
+      </div>
+      <div class="insight-item">
+        <h3>06｜潮玩 × 廟宇是 2023–2025 最新興趨勢</h3>
+        <p>路遙圓創白沙屯媽祖盲盒代表「設計師玩具（art toy）× 宮廟信仰」的新融合，與日本御守設計化、韓國傳統文化 IP 化趨勢同步，是台灣廟宇文創進入下一個世代的明確信號。</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>台灣宮廟文創周邊商品合作案例調查報告 &nbsp;|&nbsp; 資料調查截止：<span>2026 年 5 月</span></p>
+  <p style="margin-top:8px;">案例均來自公開媒體報導、官方新聞稿、群眾募資頁與品牌官網，不涉及非公開資料。</p>
+</footer>
+
+</body>
+</html>
